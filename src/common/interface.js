@@ -99,13 +99,14 @@ export function updateAccount(info) {
 // }
 
 export function setUserInfo(info) {
-  const { auth_token, uid, version, baseUrl } = info;
+  const { auth_token, uid, version, baseUrl, extra } = info;
   window.userBasicInfo = {
     ...info,
     auth_token: auth_token.split("=")[1],
     uid: uid,
     version: Number(version || 0),
     baseUrl: baseUrl,
+    extra
   };
 }
 

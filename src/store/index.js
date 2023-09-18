@@ -17,7 +17,7 @@ let store = new Vuex.Store({
     async submitInfo({ commit }, data) {
       try {
         const res = await axios({
-          url: "https://api.kingboat.io/feedback",
+          url: window.userBasicInfo.baseUrl + "/feedback",
           method: "post",
           data,
           headers: {

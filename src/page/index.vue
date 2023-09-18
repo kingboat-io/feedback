@@ -415,6 +415,7 @@ export default {
               name: this.nickName,
               email: this.email,
               content: this.text,
+              extra: (window.userBasicInfo || {}).extra
             }),
           ],
           {
